@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" role="img" aria-label="CY logo">
+  <defs>
+    <linearGradient id="navy" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#061c32"/><stop offset="1" stop-color="#00152d"/></linearGradient>
+    <linearGradient id="ice" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#f8faff"/><stop offset="1" stop-color="#e7f0ff"/></linearGradient>
+    <linearGradient id="blue" x1="0" x2="0.7" y1="0" y2="1"><stop stop-color="#6bbcff"/><stop offset="1" stop-color="#3da5f5"/></linearGradient>
+  </defs>
+  <rect width="1000" height="1000" rx="180" fill="url(#navy)"/>
+  <path d="M 788 194 L 515 194 A 306 306 0 0 0 515 806 L 788 806 L 720 724 L 515 724 A 224 224 0 0 1 515 276 L 720 276 Z" fill="url(#ice)"/>
+  <path d="M 395 341 L 485 341 L 590 441 L 695 341 L 785 341 L 632 495 L 632 613 L 692 675 L 488 675 L 548 613 L 548 495 Z" fill="url(#blue)"/>
+</svg>

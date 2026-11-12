@@ -55,7 +55,6 @@
     });
 })();
 
-// About is the top of the page, so keep the address clean (no #about) when going there
 (function () {
     function cleanAddress() {
         if (window.location.hash === "#about") {
@@ -68,7 +67,7 @@
             event.preventDefault();
             var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
             window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
-            cleanAddress();
+            history.replaceState(null, "", window.location.pathname + window.location.search);
         });
     });
 
@@ -89,6 +88,11 @@
             if (!entry.isIntersecting) { return; }
             Object.keys(navLinks).forEach(function (id) { navLinks[id].classList.remove("active"); });
             if (navLinks[entry.target.id]) { navLinks[entry.target.id].classList.add("active"); }
+
+            var hash = entry.target.id === "about" ? "" : "#" + entry.target.id;
+            if (window.location.hash !== hash) {
+                history.replaceState(null, "", window.location.pathname + window.location.search + hash);
+            }
         });
     }, { rootMargin: "-45% 0px -50% 0px" });
 
